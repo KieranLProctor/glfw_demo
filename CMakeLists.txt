@@ -15,11 +15,11 @@ if( MSVC )
     SET( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /ENTRY:mainCRTStartup" )
 endif()
 
-set( SRC
+set( SRC_DIR
      ./src/main.cpp
      )
      
-add_executable( glfw_demo WIN32 ${SRC} )
+add_executable( glfw_demo WIN32 ${SRC_DIR} )
 target_link_libraries( glfw_demo ${OPENGL_LIBRARIES} glfw )
 if( MSVC )
     if(${CMAKE_VERSION} VERSION_LESS "3.6.0") 
